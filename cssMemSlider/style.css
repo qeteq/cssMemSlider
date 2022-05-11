@@ -1,3 +1,7 @@
+/*
+ * Base layout
+ */
+
 .container {
     max-width: 30em;
     margin: 2em auto;
@@ -21,6 +25,33 @@
     }
 }
 
+.slides,
+.slides > img {
+    aspect-ratio: 1 / 1;
+}
+.slides > img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+.descriptions p {
+    margin: 0.75em 0;
+}
+.buttons {
+    display: flex;
+    align-items: flex-start;
+}
+.buttons > label {
+    padding: 0.75em;
+    cursor: pointer;
+}
+
+
+/*
+ * Slider
+ */
+
 input[type="radio"] {
     display: block;
     width: 0;
@@ -28,34 +59,72 @@ input[type="radio"] {
     opacity: 0;
 }
 
-.slides,
-.slides > img {
-    aspect-ratio: 1 / 1;
-}
 .slides {
     display: flex;
     overflow: hidden;
 }
-.slides > img {
-    display: block;
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-    background-color: black;
-}
 
-.descriptions p {
-    margin: 0.75em 0;
-}
-
-.buttons {
+.descriptions {
     display: flex;
-    align-items: flex-start;
 }
-.buttons > label {
-    display: inline-block;
-    padding: 0.75em;
-    cursor: pointer;
+.descriptions p {
+    opacity: 0;
+    flex: 0 0 100%;
+}
+
+input[type="radio"]:nth-child(1):checked ~ .info .descriptions p:nth-child(1),
+input[type="radio"]:nth-child(2):checked ~ .info .descriptions p:nth-child(2),
+input[type="radio"]:nth-child(3):checked ~ .info .descriptions p:nth-child(3),
+input[type="radio"]:nth-child(4):checked ~ .info .descriptions p:nth-child(4),
+input[type="radio"]:nth-child(5):checked ~ .info .descriptions p:nth-child(5) {
+    opacity: 1;
+}
+
+input[type="radio"]:nth-child(1):checked ~ .info .buttons label:nth-child(1) > i,
+input[type="radio"]:nth-child(2):checked ~ .info .buttons label:nth-child(2) > i,
+input[type="radio"]:nth-child(3):checked ~ .info .buttons label:nth-child(3) > i,
+input[type="radio"]:nth-child(4):checked ~ .info .buttons label:nth-child(4) > i,
+input[type="radio"]:nth-child(5):checked ~ .info .buttons label:nth-child(5) > i {
+    background-color: blue;
+}
+
+input[type="radio"]:nth-child(1):checked ~ .slides img {
+    transform: translateX(0);
+}
+input[type="radio"]:nth-child(2):checked ~ .slides img {
+    transform: translateX(-100%);
+}
+input[type="radio"]:nth-child(3):checked ~ .slides img {
+    transform: translateX(-200%);
+}
+input[type="radio"]:nth-child(4):checked ~ .slides img {
+    transform: translateX(-300%);
+}
+input[type="radio"]:nth-child(5):checked ~ .slides img {
+    transform: translateX(-400%);
+}
+
+.descriptions p:nth-child(2) {
+    transform: translateX(-100%);
+}
+
+.descriptions p:nth-child(3) {
+    transform: translateX(-200%);
+}
+.descriptions p:nth-child(4) {
+    transform: translateX(-300%);
+}
+.descriptions p:nth-child(5) {
+    transform: translateX(-400%);
+}
+
+
+/*
+ * Theme
+ */
+
+.slides > img {
+    background-color: black;
 }
 .buttons > label > i {
     display: block;
@@ -66,4 +135,7 @@ input[type="radio"] {
 }
 .buttons > label:hover > i {
     background-color: #ccc;
+}
+.buttons > label:active > i {
+    background-color: rgba(0, 0, 255, 0.5);
 }
