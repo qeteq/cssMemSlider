@@ -1,0 +1,69 @@
+.container {
+    max-width: 30em;
+    margin: 2em auto;
+    padding: 0 10em;
+}
+
+.info {
+    display: flex;
+    margin-top: 1em;
+}
+
+.info > .descriptions {
+    flex: 1;
+    margin-right: 1em;
+}
+
+@media (max-width: 720px) {
+    .info {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+}
+
+input[type="radio"] {
+    display: block;
+    width: 0;
+    height: 0;
+    opacity: 0;
+}
+
+.slides,
+.slides > img {
+    aspect-ratio: 1 / 1;
+}
+.slides {
+    display: flex;
+    overflow: hidden;
+}
+.slides > img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    background-color: black;
+}
+
+.descriptions p {
+    margin: 0.75em 0;
+}
+
+.buttons {
+    display: flex;
+    align-items: flex-start;
+}
+.buttons > label {
+    display: inline-block;
+    padding: 0.75em;
+    cursor: pointer;
+}
+.buttons > label > i {
+    display: block;
+    width: 0.5em;
+    height: 0.5em;
+    border: 0.1em solid blue;
+    border-radius: 50%;
+}
+.buttons > label:hover > i {
+    background-color: #ccc;
+}

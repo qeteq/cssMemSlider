@@ -5,65 +5,85 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>xkcd slider</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <input type="radio" id="r1" checked />
-        <input type="radio" id="r2" />
-        <input type="radio" id="r3" />
-        <input type="radio" id="r4" />
+        <div class="container">
+            <input type="radio" id="r1" checked />
+            <input type="radio" id="r2" />
+            <input type="radio" id="r3" />
+            <input type="radio" id="r4" />
 
-        <div class="slides">
-            <img
-                id="i1"
-                src="https://imgs.xkcd.com/comics/selection_bias.png"
-                alt="Selection Bias"
-            />
-            <img
-                id="i2"
-                src="https://imgs.xkcd.com/comics/maps.png"
-                alt="Maps"
-            />
-            <img
-                id="i3"
-                src="https://imgs.xkcd.com/comics/deep_end.png"
-                alt="Deep End"
-            />
-            <img
-                id="i4"
-                src="https://imgs.xkcd.com/comics/welcome_back.png"
-                alt="Welcome Back"
-            />
+            <div class="slides">
+                <img
+                    id="i1"
+                    src="https://imgs.xkcd.com/comics/selection_bias.png"
+                    alt="Selection Bias"
+                />
+                <img
+                    id="i2"
+                    src="https://imgs.xkcd.com/comics/maps.png"
+                    alt="Maps"
+                />
+                <img
+                    id="i3"
+                    src="https://imgs.xkcd.com/comics/deep_end.png"
+                    alt="Deep End"
+                />
+                <img
+                    id="i4"
+                    src="https://imgs.xkcd.com/comics/welcome_back.png"
+                    alt="Welcome Back"
+                />
+            </div>
+
+            <div class="info">
+                <div class="descriptions">
+                    <p id="d1">
+                        We carefully sampled the general population and found
+                        that most people are familiar with acquiescence bias.
+                        <a id="d1" href="https://xkcd.com/2618" target="_blank" rel="noopener noreferrer">
+                            Link
+                        </a>
+                    </p>
+
+                    <p id="d2">
+                        OpenStreetMap was always pretty good but is also now
+                        *really* good? And Apple Maps's new zoomed-in design in
+                        certain cities like NYC and London is just gorgeous.
+                        It's cool how there are all these good maps now!
+                        <a href="https://xkcd.com/2617" target="_blank" rel="noopener noreferrer">
+                            Link
+                        </a>
+                    </p>
+
+                    <p id="d3">
+                        Hey! No running in the back-arc basin!
+                        <a href="https://xkcd.com/2616" target="_blank" rel="noopener noreferrer">
+                            Link
+                        </a>
+                    </p>
+
+                    <p id="d4">
+                        'We're shocked by the Notre Dame fire. Click for our
+                        tribute to--' [okay] 'Now that we're all staying at home
+                        these past few weeks thanks to this new coronavirus,
+                        we--' [okay]
+                        <a href="https://xkcd.com/2615" target="_blank" rel="noopener noreferrer">
+                            Link
+                        </a>
+                    </p>
+                </div>
+
+                <nav class="buttons">
+                    <label for="r1"><i><i></i></i></label>
+                    <label for="r2"><i><i></i></i></label>
+                    <label for="r3"><i><i></i></i></label>
+                    <label for="r4"><i><i></i></i></label>
+                    <label for="r5"><i><i></i></i></label>
+                </nav>
+            </div>
         </div>
-
-        <p class="descriptions">
-            <a id="d1" href="https://xkcd.com/2618" target="_blank" rel="noopener noreferrer">
-                We carefully sampled the general population and found that most people
-                are familiar with acquiescence bias.
-            </a>
-
-            <a id="d2" href="https://xkcd.com/2617" target="_blank" rel="noopener noreferrer">
-                OpenStreetMap was always pretty good but is also now *really* good? And
-                Apple Maps's new zoomed-in design in certain cities like NYC and London
-                is just gorgeous. It's cool how there are all these good maps now!
-            </a>
-
-            <a id="d3" href="https://xkcd.com/2616" target="_blank" rel="noopener noreferrer">
-                Hey! No running in the back-arc basin!
-            </a>
-
-            <a id="d4" href="https://xkcd.com/2615" target="_blank" rel="noopener noreferrer">
-                'We're shocked by the Notre Dame fire. Click for our tribute to--'
-                [okay] 'Now that we're all staying at home these past few weeks thanks
-                to this new coronavirus, we--' [okay]
-            </a>
-        </p>
-
-        <nav class="buttons">
-            <label for="r1"><i><i></i></i></label>
-            <label for="r2"><i><i></i></i></label>
-            <label for="r3"><i><i></i></i></label>
-            <label for="r4"><i><i></i></i></label>
-            <label for="r5"><i><i></i></i></label>
-        </nav>
     </body>
 </html>
