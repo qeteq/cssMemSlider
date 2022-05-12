@@ -159,3 +159,6 @@ input[type='radio']:nth-child(5):checked ~ .info .buttons label:nth-child(5) > i
 .descriptions p {
     transition: opacity ease-in-out 0.75s, transform ease-in-out 0.75s;
 }
+.slides img {
+    transition: transform cubic-bezier(0, 0.5, 0, 1) 0.75s;
+}
