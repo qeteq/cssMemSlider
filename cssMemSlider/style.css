@@ -47,12 +47,11 @@
     cursor: pointer;
 }
 
-
 /*
  * Slider
  */
 
-input[type="radio"] {
+input[type='radio'] {
     display: block;
     width: 0;
     height: 0;
@@ -72,52 +71,65 @@ input[type="radio"] {
     flex: 0 0 100%;
 }
 
-input[type="radio"]:nth-child(1):checked ~ .info .descriptions p:nth-child(1),
-input[type="radio"]:nth-child(2):checked ~ .info .descriptions p:nth-child(2),
-input[type="radio"]:nth-child(3):checked ~ .info .descriptions p:nth-child(3),
-input[type="radio"]:nth-child(4):checked ~ .info .descriptions p:nth-child(4),
-input[type="radio"]:nth-child(5):checked ~ .info .descriptions p:nth-child(5) {
-    opacity: 1;
-}
-
-input[type="radio"]:nth-child(1):checked ~ .info .buttons label:nth-child(1) > i,
-input[type="radio"]:nth-child(2):checked ~ .info .buttons label:nth-child(2) > i,
-input[type="radio"]:nth-child(3):checked ~ .info .buttons label:nth-child(3) > i,
-input[type="radio"]:nth-child(4):checked ~ .info .buttons label:nth-child(4) > i,
-input[type="radio"]:nth-child(5):checked ~ .info .buttons label:nth-child(5) > i {
-    background-color: blue;
-}
-
-input[type="radio"]:nth-child(1):checked ~ .slides img {
+input[type='radio']:nth-child(1):checked ~ .slides img {
     transform: translateX(0);
 }
-input[type="radio"]:nth-child(2):checked ~ .slides img {
+input[type='radio']:nth-child(2):checked ~ .slides img {
     transform: translateX(-100%);
 }
-input[type="radio"]:nth-child(3):checked ~ .slides img {
+input[type='radio']:nth-child(3):checked ~ .slides img {
     transform: translateX(-200%);
 }
-input[type="radio"]:nth-child(4):checked ~ .slides img {
+input[type='radio']:nth-child(4):checked ~ .slides img {
     transform: translateX(-300%);
 }
-input[type="radio"]:nth-child(5):checked ~ .slides img {
+input[type='radio']:nth-child(5):checked ~ .slides img {
     transform: translateX(-400%);
 }
 
-.descriptions p:nth-child(2) {
-    transform: translateX(-100%);
+.descriptions p:nth-child(1) {
+    transform: translateX(0) translateY(0.5em);
 }
-
+.descriptions p:nth-child(2) {
+    transform: translateX(-100%) translateY(0.5em);
+}
 .descriptions p:nth-child(3) {
-    transform: translateX(-200%);
+    transform: translateX(-200%) translateY(0.5em);
 }
 .descriptions p:nth-child(4) {
-    transform: translateX(-300%);
+    transform: translateX(-300%) translateY(0.5em);
 }
 .descriptions p:nth-child(5) {
-    transform: translateX(-400%);
+    transform: translateX(-400%) translateY(0.5em);
+}
+input[type='radio']:nth-child(1):checked ~ .info .descriptions p:nth-child(1) {
+    opacity: 1;
+    transform: translateX(0) translateY(0);
+}
+input[type='radio']:nth-child(2):checked ~ .info .descriptions p:nth-child(2) {
+    opacity: 1;
+    transform: translateX(-100%) translateY(0);
+}
+input[type='radio']:nth-child(3):checked ~ .info .descriptions p:nth-child(3) {
+    opacity: 1;
+    transform: translateX(-200%) translateY(0);
+}
+input[type='radio']:nth-child(4):checked ~ .info .descriptions p:nth-child(4) {
+    opacity: 1;
+    transform: translateX(-300%) translateY(0);
+}
+input[type='radio']:nth-child(5):checked ~ .info .descriptions p:nth-child(5) {
+    opacity: 1;
+    transform: translateX(-400%) translateY(0);
 }
 
+input[type='radio']:nth-child(1):checked ~ .info .buttons label:nth-child(1) > i,
+input[type='radio']:nth-child(2):checked ~ .info .buttons label:nth-child(2) > i,
+input[type='radio']:nth-child(3):checked ~ .info .buttons label:nth-child(3) > i,
+input[type='radio']:nth-child(4):checked ~ .info .buttons label:nth-child(4) > i,
+input[type='radio']:nth-child(5):checked ~ .info .buttons label:nth-child(5) > i {
+    background-color: blue;
+}
 
 /*
  * Theme
@@ -138,4 +150,12 @@ input[type="radio"]:nth-child(5):checked ~ .slides img {
 }
 .buttons > label:active > i {
     background-color: rgba(0, 0, 255, 0.5);
+}
+
+/*
+ * Animations
+ */
+
+.descriptions p {
+    transition: opacity ease-in-out 0.75s, transform ease-in-out 0.75s;
 }
