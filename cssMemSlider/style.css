@@ -26,10 +26,10 @@
 }
 
 .slides,
-.slides > img {
+.slides img {
     aspect-ratio: 1 / 1;
 }
-.slides > img {
+.slides img {
     display: block;
     width: 100%;
     height: auto;
@@ -42,7 +42,7 @@
     display: flex;
     align-items: flex-start;
 }
-.buttons > label {
+.buttons label {
     padding: 0.75em;
     cursor: pointer;
 }
@@ -135,20 +135,21 @@ input[type='radio']:nth-child(5):checked ~ .info .buttons label:nth-child(5) > i
  * Theme
  */
 
-.slides > img {
+.slides,
+.slides img {
     background-color: black;
 }
-.buttons > label > i {
+.buttons label > i {
     display: block;
     width: 0.5em;
     height: 0.5em;
     border: 0.1em solid blue;
     border-radius: 50%;
 }
-.buttons > label:hover > i {
+.buttons label:hover > i {
     background-color: #ccc;
 }
-.buttons > label:active > i {
+.buttons label:active > i {
     background-color: rgba(0, 0, 255, 0.5);
 }
 
@@ -160,5 +161,79 @@ input[type='radio']:nth-child(5):checked ~ .info .buttons label:nth-child(5) > i
     transition: opacity ease-in-out 0.75s, transform ease-in-out 0.75s;
 }
 .slides img {
+    filter: none;
     transition: transform cubic-bezier(0, 0.5, 0, 1) 0.75s;
+}
+input[type="radio"]:nth-child(1):checked ~ .slides img {
+    animation: mb1 0.75s cubic-bezier(0, 0.5, 0, 1);
+}
+input[type="radio"]:nth-child(2):checked ~ .slides img {
+    animation: mb2 0.75s cubic-bezier(0, 0.5, 0, 1);
+}
+input[type="radio"]:nth-child(3):checked ~ .slides img {
+    animation: mb3 0.75s cubic-bezier(0, 0.5, 0, 1);
+}
+input[type="radio"]:nth-child(4):checked ~ .slides img {
+    animation: mb4 0.75s cubic-bezier(0, 0.5, 0, 1);
+}
+
+@keyframes mb1 {
+    0%     { filter: url('#mb12') }
+    8.33%  { filter: url('#mb11') }
+    16.67% { filter: url('#mb10') }
+    25%    { filter: url('#mb9')  }
+    33.33% { filter: url('#mb8')  }
+    41.67% { filter: url('#mb7')  }
+    50%    { filter: url('#mb6')  }
+    58.33% { filter: url('#mb5')  }
+    66.67% { filter: url('#mb4')  }
+    75%    { filter: url('#mb3')  }
+    83.33% { filter: url('#mb2')  }
+    91.67% { filter: url('#mb1')  }
+    100%   { filter: none         }
+}
+@keyframes mb2 {
+    0%     { filter: url('#mb12') }
+    8.33%  { filter: url('#mb11') }
+    16.67% { filter: url('#mb10') }
+    25%    { filter: url('#mb9')  }
+    33.33% { filter: url('#mb8')  }
+    41.67% { filter: url('#mb7')  }
+    50%    { filter: url('#mb6')  }
+    58.33% { filter: url('#mb5')  }
+    66.67% { filter: url('#mb4')  }
+    75%    { filter: url('#mb3')  }
+    83.33% { filter: url('#mb2')  }
+    91.67% { filter: url('#mb1')  }
+    100%   { filter: none         }
+}
+@keyframes mb3 {
+    0%     { filter: url('#mb12') }
+    8.33%  { filter: url('#mb11') }
+    16.67% { filter: url('#mb10') }
+    25%    { filter: url('#mb9')  }
+    33.33% { filter: url('#mb8')  }
+    41.67% { filter: url('#mb7')  }
+    50%    { filter: url('#mb6')  }
+    58.33% { filter: url('#mb5')  }
+    66.67% { filter: url('#mb4')  }
+    75%    { filter: url('#mb3')  }
+    83.33% { filter: url('#mb2')  }
+    91.67% { filter: url('#mb1')  }
+    100%   { filter: none         }
+}
+@keyframes mb4 {
+    0%     { filter: url('#mb12') }
+    8.33%  { filter: url('#mb11') }
+    16.67% { filter: url('#mb10') }
+    25%    { filter: url('#mb9')  }
+    33.33% { filter: url('#mb8')  }
+    41.67% { filter: url('#mb7')  }
+    50%    { filter: url('#mb6')  }
+    58.33% { filter: url('#mb5')  }
+    66.67% { filter: url('#mb4')  }
+    75%    { filter: url('#mb3')  }
+    83.33% { filter: url('#mb2')  }
+    91.67% { filter: url('#mb1')  }
+    100%   { filter: none         }
 }
