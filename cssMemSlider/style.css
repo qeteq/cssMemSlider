@@ -53,6 +53,7 @@
 .slides img {
     display: block;
     width: 100%;
+    flex: 0 0 100%;
     height: auto;
     object-fit: contain;
 }
